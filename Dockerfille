@@ -1,0 +1,11 @@
+# workdir
+WORKDIR /usr/share/caddy
+
+# copy all file
+COPY . .
+
+# expose port
+EXPOSE 90
+
+# run caddy
+CMD ["caddy", "run", "--config", "Caddyfile", "--adapter", "caddyfile"]
